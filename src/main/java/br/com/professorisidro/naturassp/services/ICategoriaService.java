@@ -6,7 +6,7 @@ import br.com.professorisidro.naturassp.model.Categoria;
 
 public interface ICategoriaService {
 
-	public Categoria inseriNovaCategoria(Categoria categoria);
+	public Categoria inserirNovaCategoria(Categoria categoria);
 	
 	public Categoria alterarCategoria(Categoria categoria);
 	

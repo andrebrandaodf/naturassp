@@ -15,7 +15,7 @@ public class CategoriaServiceImpl implements ICategoriaService {
 	private CategoriaDAO dao;
 
 	@Override
-	public Categoria inseriNovaCategoria(Categoria categoria) {
+	public Categoria inserirNovaCategoria(Categoria categoria) {
 		try {
 			if(categoria.getNome() != null && categoria.getNome().trim().length() > 0) {
 				dao.save(categoria);
@@ -56,7 +56,7 @@ public class CategoriaServiceImpl implements ICategoriaService {
 	public List<Categoria> recuperarPorPalavraChave(String palavraChave) {
 
 		if(palavraChave != null) {
-			return dao.findByNomeContainig(palavraChave);
+			return dao.findByNomeContaining(palavraChave);
 		}
 		return null;
 	}
