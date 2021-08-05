@@ -68,4 +68,10 @@ public class ProdutoServiceImpl implements IProdutoService {
 		return dao.findAllByDisponivel(0);
 	}
 
+	@Override
+	public Produto recuperarPorId( int id) {
+	
+		return dao.findById(id).orElse(null);
+	}
+
 }
